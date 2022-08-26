@@ -1,0 +1,124 @@
+:root {
+    --HomeButtonColor: #00ff6b;
+    --HomeButtonColor2: #00ffe0;
+    --HomeButtonColorHover: #00ffe0;
+    --HomeButtonColorHover2: #00ff6b;
+    --HomeButtonBorderRadiusHover: 10px 90px;
+    --HomeButtonBorderRadius: 10px;
+}
+
+.MainHome {
+    transition: ease 1s;
+    border-radius: var(--HomeButtonBorderRadius);
+    background-image: linear-gradient(var(--HomeButtonColor), var(--HomeButtonColor2));
+    padding: 5px;
+    width: 60px;
+    margin-top: 20px;
+    margin-left: -3.9%;
+    margin-right: 3.9%;
+}
+
+.MainHome:hover {
+    transition: ease 1s;
+    background-image: linear-gradient(var(--HomeButtonColorHover), var(--HomeButtonColorHover2));
+    border-radius: var(--HomeButtonBorderRadiusHover);
+}
+
+.MainNav {
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 10px;
+    margin-top: 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.Body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.MainImageLogo {
+    max-width: 100%;
+    height: 70px;
+    float: left;
+    margin-right: 3.9%;
+}
+
+.Part1 {
+    margin: 0;
+}
+
+.Part2 {
+    margin-top: 30%;
+}
+
+.MainImage {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 5%;
+    box-shadow: black 1px 10px 40px;
+}
+
+.MainText {
+    text-align: center;
+    margin-top: -35%;
+    font-size: 70px;
+    background-image: linear-gradient(50deg, #fff700, #ff0000);
+    filter: drop-shadow(0 20px 30px #28d8ff33);
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+}
+
+.Part2Text {
+    text-align: center;
+}
+
+.imageParents {
+    height: 700px;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10%;
+    box-shadow: black 0px 0px 10px 10px;
+    background: url(https://cdn.discordapp.com/attachments/984630666438279239/1012831602327441500/unknown.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.noteParentText {
+    margin-left: -60%;
+    font-size: 50px;
+    padding: 3%;
+    background-image: linear-gradient(50deg, #ff0000, #0079ff);
+    filter: drop-shadow(0 20px 30px #28d8ff33);
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    margin-bottom: -30px;
+}
+
+.noteParentText2 {
+    margin-left: -50%;
+    font-size: 25px;
+    padding: 0%;
+    color: lightgray;
+}
+
+.noteParentStyle {
+    padding: 5%;
+}
+
+.playerCount {
+    text-align: center;
+}
+
+.howJoin {
+    font-size: 50px;
+    margin-top: 5%;
+}
