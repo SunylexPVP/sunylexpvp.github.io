@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+    <title>Sunylex News</title>
+    <script>
+        title = "Sunylex";
+        icon = "https://cdn.discordapp.com/attachments/984630666438279239/1012870950678700132/unknown.png";
+    // Style
+        homeButtonColor = "#00ff6b";
+        homeButtonColor2 = "#00ffe0";
+        homeButtonColorHover = "#00ffe0";
+        homeButtonColorHover2 = "#00ff6b";
+        homeButtonBorderRadius = "10px";
+        homeButtonBorderRadiusHover = "10px 90px";
+    // Others
+        copiedText = "Sunylex.minehut.gg";
+        copiedIpMessage = "Copied the ip!";
+    // Links
+        homeLink = "index.html";
+        aboutLink = "https://sunylexpvp.tebex.io/";
+        newsLink = "news.html";
+        logoLink = "index.html";
+    // Server
+        serverIp = "Sunylex.minehut.gg";
+        serverPort = "25565";
+    </script>
+</head>
+<body class="NewsPart1">
+    <ul class="MainNav">
+        <nav>
+            <img onclick="logoLinkFunction()" class="MainImageLogo" src="https://cdn.discordapp.com/attachments/984630666438279239/1012870950678700132/unknown.png" alt="Sunylex Logo">
+                <button onclick="homeLinkFunction()" class="MainHome">Home</button>
+                <button onclick="aboutLinkFunction()" class="MainHome">Store</button>
+                <button onclick="newsLinkFunction()" class="MainHome">News</button>
+                <button onclick="darkMode()" class="DarkMode">Toggle Mode</button>
+        </nav>
+    </ul>
+        <div>
+            <img class="MainImage" src="https://cdn.discordapp.com/attachments/984630666438279239/1012762996038184970/back.png" alt="Main Image">
+            <div class="MainText">News</div>
+            <body>
+                <div>
+                    <div class="playerCount">
+                        <div>The official Sunylex news</div>
+                    </div>
+                </div>
+            </body>    
+        </div>
+        <div class="News1">
+        <div class="V5IsOut">
+            <p class="V5Text">The V5 is out!</p>
+            <p class="V5TextNormal">Yes you just learned it!</p>
+            <p class="V5TextNormal">You can now play Sunylex on the V5.</p>
+            <p class="V5TextNormal">We have fixed some bugs, added games</p>
+            <p class="V5TextNormal">and some new addons.</p>
+            <p class="V5TextNormal">Join us now!</p>
+        </div>
+    </div>
+    <script>
+        document.title = (title);
+        let styleOptions = document.querySelector(':root');
+        styleOptions.style.setProperty('--HomeButtonColor', homeButtonColor)
+        styleOptions.style.setProperty('--HomeButtonColor2', homeButtonColor2)
+        styleOptions.style.setProperty('--HomeButtonColorHover', homeButtonColorHover)
+        styleOptions.style.setProperty('--HomeButtonColorHover2', homeButtonColorHover2)
+        styleOptions.style.setProperty('--HomeButtonBorderRadius', homeButtonBorderRadius)
+        styleOptions.style.setProperty('--HomeButtonBorderRadiusHover', homeButtonBorderRadiusHover)
+        function copyIp(){
+            navigator.clipboard.writeText(copiedText);
+            alert(copiedIpMessage);
+        }
+        function homeLinkFunction(){
+            window.open(homeLink,"_self")
+        }
+        function aboutLinkFunction(){
+            window.open(aboutLink)
+        }
+        function newsLinkFunction(){
+            window.open(newsLink,"_self")
+        }
+        function logoLinkFunction(){
+            window.open(logoLink,"_self")
+        }
+        function initServerData(serverIp,serverPort){
+            fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
+            .then(response => response.json())
+            .then(data => handleServerStatus(data));
+  
+        function handleServerStatus(data){
+            if(data.status=='error'){
+                console.log(data.error);
+                return false;
+            }
+            const playerCounter = document.getElementById("player-count");
+            playerCounter.innerHTML = data.players.now;
+            } 
+        }
+        initServerData(serverIp, serverPort);
+        let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = (icon);
+            document.getElementsByTagName('head')[0].appendChild(link);
+            function darkMode() {
+        let darkMode = document.body;
+            darkMode.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
