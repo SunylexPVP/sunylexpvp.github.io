@@ -47,12 +47,8 @@ document.title = (title);
             darkMode.classList.toggle("dark-mode");
         }
         function gototop() {
-        var scrollToTop = window.setInterval(function() {
-            var pos = window.pageYOffset;
-            if ( pos > 0 ) {
-                window.scrollTo( 0, pos - 65 ); // how far to scroll on each step
-            } else {
-                window.clearInterval( scrollToTop );
+            if (window.scrollY>0) {
+                window.scrollTo(0,window.scrollY-20)
+                setTimeout("gototop()",10,)
             }
-        }, 70);
         }
