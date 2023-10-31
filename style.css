@@ -2,9 +2,9 @@
     --MaxPageWidth: 2000px;
     --PageFont: 'MedievalFont', serif;
     --PageBackgroundColor: #d3d399;
-    --NavBackground: #6b4126; /* Dark brown for the navigation bar */
-    --ContentBackground: #f5deb3; /* Wheat color for the content background */
-    --TextMedieval: #8b4513; /* Saddle brown for medieval-style text */
+    --NavBackground: #6b4126;
+    --ContentBackground: #f5deb3;
+    --TextMedieval: #8b4513;
 }
 
 body, html {
@@ -16,17 +16,33 @@ body, html {
 }
 
 nav {
-    background: var(--NavBackground); /* Set the navigation bar background color */
+    background: var(--NavBackground);
+    border-bottom: 5px solid #7e5417; /* Add a medieval-style border to the navigation bar */
 }
 
 .navlinks {
     font-family: var(--PageFont);
-    color: var(--TextMedieval); /* Set the navigation text color to a medieval-style color */
+    color: var(--TextMedieval);
+    font-size: 18px; /* Adjust the font size for a medieval look */
+    text-transform: uppercase; /* Make text uppercase for a medieval touch */
+    padding: 10px 15px; /* Add padding to the navigation links for better styling */
+    border-radius: 5px; /* Add rounded corners to the links */
+    margin: 0 5px; /* Adjust spacing between links */
+    background-color: #b8860b; /* Use a golden color for link backgrounds */
+    text-decoration: none; /* Remove underlines from links */
+    transition: background-color 0.3s; /* Add a transition effect for hover */
+}
+
+.navlinks:hover {
+    background-color: #cd8500; /* Darken the link background color on hover */
 }
 
 .mainMessage {
-    background: var(--ContentBackground); /* Set the content background color */
-    color: var(--TextMedieval); /* Set text color to a medieval-style color */
+    background: var(--ContentBackground);
+    color: var(--TextMedieval);
+    text-align: center; /* Center-align text for the content section */
+    padding: 20px; /* Add padding to the content section for spacing */
+    border: 5px solid #7e5417; /* Add a border to the content section */
 }
 .imageParents {
     height: 700px;
