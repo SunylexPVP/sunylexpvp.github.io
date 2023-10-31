@@ -1,32 +1,32 @@
 :root {
     --MaxPageWidth: 2000px;
-    --PageFont: arial,sans-serif;
+    --PageFont: 'MedievalFont', serif;
     --PageBackgroundColor: #d3d399;
+    --NavBackground: #6b4126; /* Dark brown for the navigation bar */
+    --ContentBackground: #f5deb3; /* Wheat color for the content background */
+    --TextMedieval: #8b4513; /* Saddle brown for medieval-style text */
 }
 
-body,html {
+body, html {
     font-family: var(--PageFont);
     max-width: var(--MaxPageWidth);
     margin: 0 auto;
     background: var(--PageBackgroundColor);
     min-width: 1300px;
 }
-.navlinks {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    background: -webkit-linear-gradient(#7e00ff, #e400ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+
+nav {
+    background: var(--NavBackground); /* Set the navigation bar background color */
 }
+
+.navlinks {
+    font-family: var(--PageFont);
+    color: var(--TextMedieval); /* Set the navigation text color to a medieval-style color */
+}
+
 .mainMessage {
-    margin-top: 150px;
-    margin-left: 160px;
-    float: left;
-    background: -webkit-linear-gradient(#545454, #898989);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: var(--ContentBackground); /* Set the content background color */
+    color: var(--TextMedieval); /* Set text color to a medieval-style color */
 }
 .imageParents {
     height: 700px;
